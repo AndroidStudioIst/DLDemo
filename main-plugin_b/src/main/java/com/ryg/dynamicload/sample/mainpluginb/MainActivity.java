@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.angcyo.main_plugin_b.R;
 import com.ryg.dynamicload.DLBasePluginActivity;
-import com.ryg.dynamicload.sample.mainhost.TestHostClass;
 
 public class MainActivity extends DLBasePluginActivity {
 
@@ -42,8 +41,8 @@ public class MainActivity extends DLBasePluginActivity {
         button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                TestHostClass testHostClass = new TestHostClass();
-                testHostClass.testMethod(that);
+//                TestHostClass testHostClass = new TestHostClass();
+//                testHostClass.testMethod(that);
             }
         });
         

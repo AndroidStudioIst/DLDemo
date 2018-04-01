@@ -1,8 +1,5 @@
 package com.ryg.dynamicload.sample.doihost;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
@@ -19,11 +16,15 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.angcyo.doi_host.R;
 import com.ryg.dynamicload.internal.DLIntent;
 import com.ryg.dynamicload.internal.DLPluginManager;
 import com.ryg.dynamicload.sample.docommon.HostInterfaceManager;
 import com.ryg.dynamicload.sample.doihost.interfacee.HostInterfaceImp;
 import com.ryg.utils.DLUtils;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class MainActivity extends Activity implements OnItemClickListener {
 

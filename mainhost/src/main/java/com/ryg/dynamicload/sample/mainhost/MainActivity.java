@@ -55,7 +55,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
     }
 
     private void initData() {
-        String pluginFolder = Environment.getExternalStorageDirectory() + "/DynamicLoadHost";
+        String pluginFolder = Environment.getExternalStorageDirectory() + "/dl";
         File file = new File(pluginFolder);
         File[] plugins = file.listFiles();
         if (plugins == null || plugins.length == 0) {
