@@ -151,7 +151,9 @@ public class DLProxyActivity extends Activity implements DLAttachable {
 
     @Override
     public void onWindowAttributesChanged(LayoutParams params) {
-        mRemoteActivity.onWindowAttributesChanged(params);
+        if (mRemoteActivity != null) {
+            mRemoteActivity.onWindowAttributesChanged(params);
+        }
         super.onWindowAttributesChanged(params);
     }
 
@@ -172,7 +174,7 @@ public class DLProxyActivity extends Activity implements DLAttachable {
         mRemoteActivity.onOptionsItemSelected(item);
         return super.onOptionsItemSelected(item);
     }
-    
+
     @Override
     public ComponentName startService(Intent service) {
         return super.startService(service);
