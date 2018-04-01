@@ -1,0 +1,1 @@
+include ':app', ':mainhost', ':lib', ':main-plugin-a', ':main-plugin_b', ':doi-host', ':doi-common', ':doi-plugin'
