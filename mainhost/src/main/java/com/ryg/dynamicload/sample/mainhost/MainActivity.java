@@ -67,11 +67,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
             PluginItem item = new PluginItem();
             item.pluginPath = plugin.getAbsolutePath();
             item.packageInfo = DLUtils.getPackageInfo(this, item.pluginPath);
-            if (item.packageInfo.activities != null && item.packageInfo.activities.length > 0) {
-                item.launcherActivityName = item.packageInfo.activities[0].name;
-            }
-            if (item.packageInfo.services != null && item.packageInfo.services.length > 0) {
-                item.launcherServiceName = item.packageInfo.services[0].name;
+
+            if (item.packageInfo != null) {
+                if (item.packageInfo.activities != null && item.packageInfo.activities.length > 0) {
+                    item.launcherActivityName = item.packageInfo.activities[0].name;
+                }
+                if (item.packageInfo.services != null && item.packageInfo.services.length > 0) {
+                    item.launcherServiceName = item.packageInfo.services[0].name;
+                }
             }
             mPluginItems.add(item);
             DLPluginManager.getInstance(this).loadApk(item.pluginPath);
@@ -144,9 +147,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
             holder.appIcon.setImageDrawable(DLUtils.getAppIcon(MainActivity.this, item.pluginPath));
             holder.appName.setText(DLUtils.getAppLabel(MainActivity.this, item.pluginPath));
             holder.apkName.setText(item.pluginPath.substring(item.pluginPath.lastIndexOf(File.separatorChar) + 1));
-            holder.packageName.setText(packageInfo.applicationInfo.packageName + "\n" +
-                    item.launcherActivityName + "\n" +
-                    item.launcherServiceName);
+            if (packageInfo != null) {
+                holder.packageName.setText(packageInfo.applicationInfo.packageName + "\n" +
+                        item.launcherActivityName + "\n" +
+                        item.launcherServiceName);
+            }
             return convertView;
         }
     }
