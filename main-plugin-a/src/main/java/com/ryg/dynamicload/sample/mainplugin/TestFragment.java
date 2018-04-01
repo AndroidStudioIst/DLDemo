@@ -9,9 +9,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.angcyo.main_plugin_a.R;
 import com.ryg.dynamicload.internal.DLIntent;
 import com.ryg.dynamicload.internal.DLPluginManager;
-import com.ryg.dynamicload.sample.mainplugina.R;
 
 public class TestFragment extends Fragment implements OnClickListener{
 

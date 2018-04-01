@@ -17,9 +17,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.angcyo.main_plugin_a.R;
 import com.ryg.dynamicload.DLBasePluginActivity;
 import com.ryg.dynamicload.internal.DLIntent;
-import com.ryg.dynamicload.sample.mainplugina.R;
 import com.ryg.dynamicload.service.ITestServiceInterface;
 
 public class MainActivity extends DLBasePluginActivity {
