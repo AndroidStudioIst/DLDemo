@@ -11,6 +11,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.angcyo.doi_plugin.R;
 import com.ryg.dynamicload.DLBasePluginActivity;
 import com.ryg.dynamicload.sample.docommon.HostInterface;
 import com.ryg.dynamicload.sample.docommon.HostInterfaceManager;
